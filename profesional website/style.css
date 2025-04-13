@@ -134,8 +134,8 @@ header{
 
 .container img{
   position: absolute;
-  bottom: 500;
-  width: 400px;
+  bottom: 50px;
+  width: 420px;
   right: 200px;
 }
 
@@ -301,10 +301,6 @@ header{
   position: relative;
   align-items: center;
 }
-
-/*.product-container .box h2{
-  font-size: 20px;
-}*/
 
 .product-container .box img{
   width: 100%;
@@ -541,6 +537,12 @@ header{
 
 /*             making responsive              */
 
+@media (max-width: 1440px) {
+  #menu-icon {
+    display: none;
+  }
+}
+
 @media (max-width: 1080px){
   header{
     padding: 18px 60px;
@@ -550,6 +552,9 @@ header{
   }
   .container img{
     right: 100px;
+  }
+  #menu-icon {
+    display: none;
   }
 };
 
@@ -565,6 +570,9 @@ header{
   }
   .swiper-button-next, .swiper-button-prev{
     margin: 0;
+  }
+  #menu-icon {
+    display: none;
   }
 }
 
