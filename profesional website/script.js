@@ -1,3 +1,7 @@
+
+import { addToCart } from "./cart.js";
+console.log(addToCart);
+
 //  swipers
 
 let swiper = new Swiper(".home", {
@@ -40,3 +44,14 @@ let swiper = new Swiper(".home", {
     prevEl: ".swiper-button-prev",
   },
 });*/
+
+
+const butoni = document.getElementById("butoniAdd");
+
+butoni.addEventListener("click", () => {
+  const productId = productId;
+
+  addToCart(productId);
+});
+
+console.log(butoni);
