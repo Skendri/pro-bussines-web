@@ -68,10 +68,15 @@ let swiper = new Swiper(".home", {
 // });
 
 
-const cards = document.querySelectorAll(".box");
+const cards = document.querySelectorAll(".box-shop");
 const cart = document.getElementById("cart-item");
 const totaliElementeve = document.getElementById("totali");
 const selectedItem = {};
+
+console.log("ky eshte cards", cards);
+console.log("ky eshte per cart", cart);
+console.log("ky eshte per", totaliElementeve);
+console.log("ky eshte per selectetItem", selectedItem);
 
 function addToCart(event) {
   const card = event.currentTarget;
@@ -92,7 +97,8 @@ function addToCart(event) {
       // image: itemImage
     }
   }
-
+  updateCart()
+console.log("objektei selektet item pas klikuat", selectedItem);
 
 }
 
@@ -128,6 +134,7 @@ function updateCart() {
     quantityContainer.appendChild(quantityText);
     quantityContainer.appendChild(addButton);
 
+
     listItem.innerHTML = `${item.name} - ${item.price * item.count}€`;
     listItem.appendChild(quantityContainer);
     cart.appendChild(listItem);
@@ -160,7 +167,9 @@ cards.forEach((card) => {
   card.addEventListener("click", addToCart);
 });
 
-cart.addEventListener("click", () => {
+const klikoje = document.getElementById("klikoje");
+
+klikoje.addEventListener("click", () => {
   let elementi = document.createElement("div")
   let paragrafi = document.createElement("p");
   paragrafi.innerHTML = "Hello World!"

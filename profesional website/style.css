@@ -294,7 +294,7 @@ header{
   margin-top: 2rem;
 }
 
-.product-container .box{
+.product-container .box-shop{
   padding: 20px;
   box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
   border-radius: 0.5rem;
@@ -302,37 +302,37 @@ header{
   align-items: center;
 }
 
-.product-container .box img{
+.product-container .box-shop img{
   width: 100%;
   height: 200px;
   object-fit: contain;
   object-position: center;
 }
 
-.product-container .box span{
+.product-container .box-shop span{
   font-weight: 500;
   font-size: 13px;
 }
 
-.product-container .box h2{
+.product-container .box-shop h2{
   font-size: 1.2rem;
   font-weight: 600;
   margin-top: 0.5rem;
   color: var(--green-color);
 }
 
-.product-container .box .price{
+.product-container .box-shop .price{
   font-size: 1rem;
   font-weight: 600;
   margin-top: 0.5rem;
   color: var(--light-orange-color);
 }
 
-.product-container .box .price span{
+.product-container .box-shop .price span{
   color: var(--text-color);
 }
 
-.product-container .box .bxs-cart-alt{
+.product-container .box-shop .bxs-cart-alt{
   position: absolute;
   right: 0;
   bottom: 0;
@@ -342,12 +342,12 @@ header{
   border-radius: 0.5rem 0 0.5rem 0;
 }
 
-.product-container .box .bxs-cart-alt:hover{
+.product-container .box-shop .bxs-cart-alt:hover{
   background-color: var(--oragne-color);
   transition: 0.2 all linear;
 }
 
-.product-container .box .bx-heart{
+.product-container .box-shop .bx-heart{
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -355,7 +355,7 @@ header{
   color: var(--light-orange-color);
 }
 
-.product-container .box .discount{
+.product-container .box-shop .discount{
   position: absolute;
   top: 1rem;
   left: 0;
