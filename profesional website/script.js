@@ -45,33 +45,15 @@ let swiper = new Swiper(".home", {
   },
 });*/
 
-// function updateCart() {
-//   let cartQuantity = 0;
-//   cart.forEach(cartItem => {
-//     cartQuantity += cartQuantity.quantity
-//   });
-// }
 
 
-//  document.getElementById("butoniAdd").addEventListener("click", addToCart);
-
-// function add() {
-//   // const productName = "Banana";
-//   // const productPrice = 2.5;
-//   addToCart(productName, productPrice);
-// }
-
-// butoni.addEventListener("click", () => {
-//   addToCart(productName, productPrice);
-//   // const productId = productId;
-//   // addToCart(productId);
-// });
 
 
 const cards = document.querySelectorAll(".box-shop");
 const cart = document.getElementById("cart-item");
 const totaliElementeve = document.getElementById("totali");
 const selectedItem = {};
+
 
 console.log("ky eshte cards", cards);
 console.log("ky eshte per cart", cart);
@@ -98,11 +80,12 @@ function addToCart(event) {
     }
   }
   updateCart()
+  setItem()
 console.log("objektei selektet item pas klikuat", selectedItem);
 
 }
 
-function updateCart() {
+ function updateCart() {
   cart.innerHTML = "";
   let totali = 0;
 
@@ -161,20 +144,17 @@ function removeItem(itemId) {
     } // fundi i if-it te dyte
   } // fundi i if-it te pare
   updateCart();
+  setItem()
 } // fundi i funksionit removeItem()
 
 cards.forEach((card) => {
   card.addEventListener("click", addToCart);
 });
 
-const klikoje = document.getElementById("klikoje");
+function setItem() {
+  localStorage.setItem("cards", JSON.stringify(cards));
+}
 
-klikoje.addEventListener("click", () => {
-  let elementi = document.createElement("div")
-  let paragrafi = document.createElement("p");
-  paragrafi.innerHTML = "Hello World!"
-  elementi.appendChild(paragrafi);
-  console.log("this is cart",cart);
-  cart.appendChild(elementi);
-  document.body.append(elementi);
-})
+
+let getItem = JSON.parse(localStorage.getItem("cards"));
+console.log("keto jane items qe jane bere get nga local storage" ,getItem);
