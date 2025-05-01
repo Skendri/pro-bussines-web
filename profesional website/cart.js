@@ -12,7 +12,7 @@
 
 // console.log(getItem);
 
-import { updateCart } from "./script.js";
+// import { updateCart } from "./script.js";
 const cart = document.querySelector(".cart");
 console.log(updateCart);
 
