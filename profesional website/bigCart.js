@@ -1,8 +1,9 @@
-
 export let bigCart = JSON.parse(localStorage.getItem("cards"));
 
+let selectedItem = bigCart || {};
+
 function setItem() {
-  localStorage.setItem("cards", JSON.stringify(cards));
+  localStorage.setItem("cards", JSON.stringify(selectedItem));
 }
 
 export function addToCart(event) {
@@ -24,7 +25,7 @@ export function addToCart(event) {
         // image: itemImage
       }
     }
-    updateCart()
+    // Removed updateCart call to prevent rendering on index.html
     setItem()
     console.log("objektei selektet item pas klikuat", selectedItem);
   }
