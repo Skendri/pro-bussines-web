@@ -1,5 +1,5 @@
 
-import {bigCart, addToCart } from "./bigCart.js";
+import { bigCart, addToCart } from "./bigCart.js";
 // import { allFruits } from "./cart.js";
 
 //  swipers
@@ -7,7 +7,7 @@ import {bigCart, addToCart } from "./bigCart.js";
 let swiper = new Swiper(".home", {
   spaceBetween: 30,
   centeredSlides: true,
-  
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -50,15 +50,14 @@ let swiper = new Swiper(".home", {
 
 
 const cards = document.querySelectorAll(".box-shop");
+const cartButtons = document.querySelectorAll(".cart-btn");
 const cart = document.getElementById("cart-item");
 const totaliElementeve = document.getElementById("totali");
-const selectedItem = {};
-
 
 console.log("ky eshte cards", cards);
 console.log("ky eshte per cart", cart);
 console.log("ky eshte per", totaliElementeve);
-console.log("ky eshte per selectetItem", selectedItem);
+console.log("ky eshte per cart buttons", cartButtons);
 
 // function addToCart(event) {
 //   const card = event.currentTarget;
@@ -129,7 +128,7 @@ console.log("ky eshte per selectetItem", selectedItem);
 // }
 
 function addItem(itemId) {
-  if(selectedItem[itemId]) {
+  if (selectedItem[itemId]) {
     selectedItem[itemId].count++;
   }
   updateCart();
@@ -146,8 +145,9 @@ function addItem(itemId) {
 //   setItem()
 // } // fundi i funksionit removeItem()
 
-cards.forEach((card) => {
-  card.addEventListener("click", addToCart);
+// Add event listeners to cart buttons only
+cartButtons.forEach((button) => {
+  button.addEventListener("click", addToCart);
 });
 
 // function setItem() {
